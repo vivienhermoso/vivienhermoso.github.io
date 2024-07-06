@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Typing animation
     var options = {
-        strings: ['computer science student.', 'mobile application developer.', 'web developer.'],
+        strings: ['computer scientist.', 'mobile application developer.', 'web developer.'],
         typeSpeed: 25,
         backSpeed: 50,
         backDelay: 2000,
