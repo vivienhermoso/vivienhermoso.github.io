@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var typed = new Typed('#typed-text', options);
 
     // Array of background images
-    var bgImages = ['img/02.jpg', 'img/03.jpg'];
+    var bgImages = ['img/01.jpg', 'img/02.jpg', 'img/03.jpg'];
     var currentIndex = 0;
     var hero = document.getElementById('hero');
 
