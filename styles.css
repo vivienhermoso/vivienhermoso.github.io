@@ -49,6 +49,17 @@ body {
     font-size: 1.2em;
 }
 
+.hero-profile-pic {
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes it circular */
+    border: 2px solid #fff; /* Optional: Adds a white border */
+    margin-bottom: 20px; /* Optional: Adjust margin */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .section-title {
     font-size: 2.5em;
     margin-bottom: 30px;
@@ -118,4 +129,12 @@ body {
 
 .navbar.fixed-top {
     top: 0;
+}
+
+.navbar-profile-pic {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes it circular */
+    border: 2px solid #fff; /* Optional: Adds a white border */
+    margin-right: 10px;
 }

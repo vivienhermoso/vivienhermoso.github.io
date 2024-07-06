@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Typing animation
     var options = {
         strings: ['computer science student.', 'mobile application developer.', 'web developer.'],
-        typeSpeed: 50,
+        typeSpeed: 25,
         backSpeed: 50,
         backDelay: 2000,
         loop: true,
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var heroButtons = document.querySelector('.hero-buttons');
 
     // Smooth scroll and button animation
-    document.querySelectorAll('.hero-buttons a').forEach(anchor => {
+    document.querySelectorAll('.navbar-nav a, .hero-buttons a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
 
