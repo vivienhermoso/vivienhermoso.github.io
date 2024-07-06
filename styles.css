@@ -5,7 +5,7 @@ body {
 }
 
 .hero {
-    background: url('img/hero-bg.jpg') no-repeat center center;
+    background: url('img/hero-bg.jpg') no-repeat center center fixed; /* Updated */
     background-size: cover;
     height: 100vh;
     color: white;
@@ -60,7 +60,8 @@ body {
 }
 
 .card {
-    border: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
     transition: transform 0.3s;
 }
 
@@ -91,4 +92,30 @@ body {
 .btn-primary:hover {
     background-color: #ff5733;
     border-color: #ff5733;
+}
+/* Custom CSS for form layout */
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+/* Highlight subject input */
+.form-group #subject {
+    border-color: #17a2b8; /* Example color for highlighting */
+    background-color: #f0f8ff; /* Example background color for highlighting */
+}
+
+.navbar {
+    position: fixed;
+    top: -80px; /* Adjust as needed */
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.navbar.fixed-top {
+    top: 0;
 }
