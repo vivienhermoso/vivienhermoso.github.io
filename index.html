@@ -5,57 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Custom styles */
-        .hero {
-            background: url('img/hero-bg.jpg') no-repeat center center;
-            background-size: cover;
-            height: 100vh;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .portfolio-item {
-            margin-bottom: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">My Portfolio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
     <div class="hero">
-        <div>
+        <div class="hero-content">
             <h1>Welcome to My Portfolio</h1>
             <p>I'm a web developer.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">About</a>
+                <a href="#portfolio" class="btn btn-secondary">Portfolio</a>
+                <a href="#contact" class="btn btn-success">Contact</a>
+            </div>
         </div>
     </div>
 
     <!-- About Section -->
     <section id="about" class="container py-5">
-        <h2>About Me</h2>
+        <h2 class="section-title">About Me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien et neque aliquet sollicitudin.</p>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="container py-5">
-        <h2>My Work</h2>
+        <h2 class="section-title">My Work</h2>
         <div class="row">
             <div class="col-md-4 portfolio-item">
                 <div class="card">
@@ -89,7 +65,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="container py-5">
-        <h2>Contact Me</h2>
+        <h2 class="section-title">Contact Me</h2>
         <form>
             <div class="form-group">
                 <label for="name">Name</label>
@@ -111,5 +87,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
