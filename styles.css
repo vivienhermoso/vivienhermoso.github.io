@@ -220,12 +220,22 @@ footer ul li a:hover {
     color: #17a2b8; /* Hover color for links (adjust as needed) */
 }
 
+#about {
+    padding-top: 25px; /* Adjust as needed */
+    scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
+}
+
 #portfolio {
     padding-top: 25px; /* Adjust as needed */
     scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
 }
 
 #practicum {
+    padding-top: 25px; /* Adjust as needed */
+    scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
+}
+
+#contact {
     padding-top: 25px; /* Adjust as needed */
     scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
 }
@@ -241,4 +251,13 @@ footer ul li a:hover {
     height: 2px;
     background-color: #ccc;
     margin: 40px 0;
+}
+
+.profile-picture {
+    transition: transform 0.3s ease; /* Add smooth transition */
+}
+
+/* Hover effect for Profile Picture */
+.profile-picture:hover {
+    transform: scale(1.1); /* Scale up by 10% on hover */
 }
