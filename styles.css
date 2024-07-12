@@ -23,7 +23,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .hero-content {
@@ -58,12 +58,18 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-profile-pic:hover {
+    transform: scale(1.1); /* Increase size by 10% on hover */
 }
 
 .section-title {
-    font-size: 2.5em;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
     margin-bottom: 30px;
-    text-align: center;
 }
 
 .portfolio-item {
@@ -73,7 +79,9 @@ body {
 .card {
     border: 1px solid #ccc;
     border-radius: 8px;
-    transition: transform 0.3s;
+    /* transition: transform 0.3s; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust values for shadow color, size, and opacity */
+    transition: box-shadow 0.5s ease;
 }
 
 .card:hover {
@@ -137,4 +145,100 @@ body {
     border-radius: 50%; /* Makes it circular */
     border: 2px solid #fff; /* Optional: Adds a white border */
     margin-right: 10px;
+}
+
+.card-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.card.expanded .card-details {
+    display: block;
+}
+
+.skills .badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.second-description {
+    font-size: 0.9em; /* Adjust font size as needed */
+    margin-bottom: 10px;
+}
+
+.border-bottom-img {
+    border-bottom: 1px solid #ccc; /* Adjust the color and thickness as needed */
+}
+
+.about-content {
+    padding-right: 30px; /* Add space on the right for better readability */
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures the image aligns with the content height */
+}
+
+.about-image img {
+    width: 80%; /* Adjust image size as needed */
+    max-width: 300px;
+    border-radius: 50%; /* Rounded profile picture */
+    border: 4px solid #fff; /* White border around the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #343a40; /* Dark background color */
+    color: #fff; /* Light text color */
+}
+
+footer h5 {
+    color: #fff; /* Light text color for heading */
+    font-size: 1.2rem; /* Adjust heading font size */
+}
+
+footer ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #fff; /* Light text color for links */
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #17a2b8; /* Hover color for links (adjust as needed) */
+}
+
+#portfolio {
+    padding-top: 25px; /* Adjust as needed */
+    scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
+}
+
+#practicum {
+    padding-top: 25px; /* Adjust as needed */
+    scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
+}
+
+#download-cv-btn {
+    pointer-events: none; /* Disable pointer events */
+    cursor: default; /* Use default cursor to indicate it's not clickable */
+    opacity: 0.6; /* Optionally reduce opacity to visually indicate it's disabled */
+}
+
+.section-divider {
+    border: 0;
+    height: 2px;
+    background-color: #ccc;
+    margin: 40px 0;
 }

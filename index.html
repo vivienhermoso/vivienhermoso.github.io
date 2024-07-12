@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/profilepicround.png" type="image/x-icon"> 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <img src="img/profilepic.png" class="navbar-profile-pic" alt="Profile Picture">
-        <a class="navbar-brand" href="#">Vivien Ericca Hermoso</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="navbar-brand" href="#hero">
+            <img src="img/profilepic2.png" class="navbar-profile-pic" alt="Profile Picture">
+            Vivien Ericca Hermoso
+        </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Portfolio
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#portfolio">Portfolio</a>
+                        <a class="dropdown-item" href="#practicum">Practicum</a>
+                    </div>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -31,54 +39,134 @@
     <div class="hero" id="hero">
         <div class="hero-content">
             <img src="img/profilepic.png" class="hero-profile-pic" alt="Profile Picture">
-            <h1>I am Vivien Ericca Hermoso</h1>
-            <p>I'm a <span id="typed-text"></span></p>
+            <h1 style="font-size: 3rem; font-weight: bold; color: #ffffff;">I am Vivien Ericca Hermoso</h1>
+            <p style="font-size: 25px; color: #ffffff;">I'm a <span id="typed-text"></span></p>
             <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">About</a>
-                <a href="#portfolio" class="btn btn-secondary">Portfolio</a>
-                <a href="#contact" class="btn btn-success">Contact</a>
+                <a href="#about" class="btn btn-primary mr-2">About</a>
+                <a href="#portfolio" class="btn btn-primary mr-2">Portfolio</a>
+                <a href="#contact" class="btn btn-primary">Contact</a>
             </div>
         </div>
     </div>
 
     <!-- About Section -->
     <section id="about" class="container py-5">
-        <h2 class="section-title">About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien et neque aliquet sollicitudin.</p>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h2 class="section-title mb-4">About Me</h2>
+                    <p>Vivien Ericca I. Hermoso is a fourth-year Computer Science student at Mapúa Malayan Colleges Laguna. She has focused on front-end and mobile development, with a keen interest in software Quality Assurance (QA).</p>
+                    <p>Vivien gained significant experience in mobile development through her work on key projects, including iOS development for Mapúa MCL's digital passport scanner for iPad and Android development for e-ganapp.</p>
+                    <p>She has consistently demonstrated academic excellence as a Dean's Lister. Vivien currently serves as Publication Committee Chair of Mapúa MCL-ACM, 4th Year Representative of JPCS Mapúa MCL, and Internal Relations Associate of Mapúa MCL-SSC. Previously, she was Vice President for Audit of Mapúa MCL-SSC and SSC Representative of Mapúa MCL-CCIS SC.</p>
+                    <p>Through her academic and extracurricular efforts, Vivien has shown a strong commitment to her field and community.</p>
+                    <!-- Button to Download CV -->
+                <a href="pdf/Vivien Ericca Hermoso CV.pdf" target="_blank" class="btn btn-success mt-3">Download CV</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image text-center">
+                    <img src="img/profilepic2.png" class="img-fluid rounded-circle" alt="Profile Picture">
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+    <hr class="section-divider">
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="container py-5">
-        <h2 class="section-title">My Work</h2>
+        <h2 class="section-title">Notable Projects</h2>
         <div class="row">
             <div class="col-md-4 portfolio-item">
                 <div class="card">
-                    <img src="img/01.jpg" class="card-img-top" alt="Project 1">
+                    <img src="img/04.png" class="card-img-top border-bottom-img" alt="Project 1">
                     <div class="card-body">
                         <h5 class="card-title">e-ganapp</h5>
-                        <p class="card-text">Details of e-ganapp.</p>
+                        <p class="card-text">A Seamless Event Management System for Mapúa MCL.</p>
+                        <div class="card-details">
+                            <p class="second-description">Collaborating with a team on e-ganapp's mobile application using PHP, JavaScript, React Native, and cPanel for our thesis project.</p>
+                            <div class="skills">
+                                <span class="badge badge-primary">React Native</span>
+                                <span class="badge badge-secondary">Android Development</span>
+                                <span class="badge badge-success">PHP</span>
+                                <span class="badge badge-danger">cPanel</span>
+                            </div>
+                            <br/>
+                            <a href="https://play.google.com/store/apps/details?id=com.eganappattendees&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 portfolio-item">
                 <div class="card">
-                    <img src="img/02.jpg" class="card-img-top" alt="Project 2">
+                    <img src="img/02.jpg" class="card-img-top border-bottom-img" alt="Project 2">
                     <div class="card-body">
                         <h5 class="card-title">Digital Passport Scanner</h5>
-                        <p class="card-text">Details of Digital Passport Scanner.</p>
+                        <p class="card-text">Digital Passport Scanner for iPads for Mapúa MCL FEST 2023.</p>
+                        <div class="card-details">
+                            <p class="second-description">We developed a Digital Passport Scanner for iPads for Mapúa MCL FEST 2023. My main focus was on the UI/UX, utilizing SwiftUI, and implementing Core Data for the database. The project was led by James Paz, who was also responsible for creating the Digital Passport Generator.</p>
+                            <div class="skills">
+                                <span class="badge badge-primary">Swift/SwiftUI</span>
+                                <span class="badge badge-secondary">iOS Development</span>
+                                <span class="badge badge-success">Core Data</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 portfolio-item">
                 <div class="card">
-                    <img src="img/03.jpg" class="card-img-top" alt="Project 3">
+                    <img src="img/06.png" class="card-img-top border-bottom-img" alt="Project 3">
                     <div class="card-body">
-                        <h5 class="card-title">Project 3</h5>
-                        <p class="card-text">Details of project 3.</p>
+                        <h5 class="card-title">Mapúa MCL-ACM</h5>
+                        <p class="card-text">A mobile application for Mapúa MCL-ACM members.</p>
+                        <div class="card-details">
+                            <p class="second-description">Mapúa MCL-ACM Mobile Application, a specialized platform developed for members of Mapúa Malayan Colleges Laguna - Association for Computing Machinery (Mapúa MCL-ACM). The application facilitates attendance tracking, contribution management, and announcement dissemination within the organization. I contributed to the prototype and UI/UX design of the app.</p>
+                            <div class="skills">
+                                <span class="badge badge-primary">Figma</span>
+                                <span class="badge badge-secondary">Wireframe</span>
+                                <span class="badge badge-success">Prototype</span>
+                                <span class="badge badge-danger">UI/UX Design</span>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.mapuamclacmapp&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Divider -->
+    <hr class="section-divider">
+    </section>
+
+    <!-- Practicum Section -->
+    <section id="practicum" class="container py-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="section-title mb-4">Practicum Experience</h2>
+                <div class="practicum-image text-center">
+                    <img src="img/cloudlex.png" class="img-fluid rounded" alt="Practicum Image">
+                </div>
+                <div class="practicum-image text-center">
+                    <img src="img/cloudlex2.png" class="img-fluid rounded" alt="Practicum Image">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="practicum-content">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <p>Cloudlex Software Solution is a specialized software company that focuses on providing efficient operational management solutions for buildings, hotels, apartelles, and condominiums. Their client portfolio includes prominent establishments such as Myplace Residence Hall, Kingscourt 1 & Kingscourt 2, Philippine Columbian Association, Grandview Tower, Prospect, AKIC, SDA, Lasalle Taft Saint Benilde School, Benook Fried Chicken and Pancit, and Paco Marketing.</p>
+                    <p>My supervisor, Sir Lex Tansiongco, conducts meetings every Monday from 7 PM to 9 PM. These meetings are utilized for assigning tasks and presenting updates on ongoing assignments. In the second week, Sir Lex organized us into two groups. My groupmates and I help each other whenever needed.</p>
+                    <p>The first task assigned to us interns was to individually learn and develop a website using MongoDB, Express, React, and Node.js (MERN). Sir Lex provided training materials for us to follow. By the fourth week, our groups were assigned to create a web application for senior citizens, featuring both client-side and admin-side components.</p>
+                    <p>During the development phase, I primarily worked on the admin side of the application. In the last week, I shifted my focus to the customer side, where I worked on the profile view page and front-end enhancements.</p>
+                    <p>I completed a total of 340 hours over 42.5 days at Cloudlex Software Solution.</p>
+                    <!-- Button to Download CV -->
+                    <a id="download-cv-btn" href="pdf/Vivien Ericca Hermoso CV.pdf" target="_blank" class="btn btn-success mt-3">Practicum Final Report</a>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+    <hr class="section-divider">
     </section>
 
     <!-- Contact Section -->
@@ -113,6 +201,8 @@
             <h4>Thank you! Your message has been sent.</h4>
             <button id="send-another" class="btn btn-secondary">Send Another Message</button>
         </div>
+        <!-- Divider -->
+    <hr class="section-divider">
     </section>
 
     <!-- Bootstrap JS and dependencies -->
@@ -120,5 +210,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>For Work:</h5>
+                    <ul class="list-unstyled d-flex align-items-center">
+                        <li class="mr-3"><a href="https://www.linkedin.com/in/vivien-ericca-hermoso/" target="_blank" class="text-light"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="https://github.com/vivienhermoso" target="_blank" class="text-light"><i class="fab fa-github"></i> GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>For Social:</h5>
+                    <ul class="list-unstyled d-flex align-items-center">
+                        <li class="mr-3"><a href="https://www.facebook.com/meovvn/" target="_blank" class="text-light"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/vivienhermoso" target="_blank" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
