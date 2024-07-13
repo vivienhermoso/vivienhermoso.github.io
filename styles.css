@@ -97,6 +97,23 @@ body {
     color: #ffffff;
 }
 
+.hero-social-links {
+    margin-top: 20px; /* Adjust spacing as needed */
+    text-align: center; /* Center align the content horizontally */
+}
+
+.hero-social-links a {
+    display: inline-block; /* Display links inline */
+    margin-right: 25px; /* Adjust spacing between icons */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hero-social-links a:hover {
+    color: #666666 !important; /* Hover color (adjust as needed) */
+}
+
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
