@@ -175,4 +175,58 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // image click
+    var profilePicture = document.querySelector('.profile-picture');
+    var hiddenImage = document.querySelector('.hidden-image');
+    var clickCount = 0;
+    var texts = ["Bazinga", "😂"];
+    var textElement = document.getElementById('click-text');
+
+    profilePicture.addEventListener('click', function() {
+        clickCount++;
+
+        // Check if click count is a multiple of 10
+        if (clickCount % 5 === 0 && clickCount % 10 !== 0) {
+            var randomIndex = Math.floor(Math.random() * texts.length);
+            var randomText = texts[randomIndex];
+
+            // Display the text with animation
+            textElement.textContent = randomText;
+            textElement.style.display = 'block';
+            textElement.style.animation = 'none'; // Reset animation
+            textElement.offsetHeight; // Trigger reflow
+            textElement.style.animation = ''; // Re-apply animation
+
+            // Remove text after animation ends (1 second)
+            setTimeout(function() {
+                textElement.style.display = 'none';
+            }, 1000);
+        }
+
+        // Check if click count is a multiple of 100
+        if (clickCount % 10 === 0) {
+            hiddenImage.classList.add('show-hidden-image');
+
+            // Hide the hidden image after 3 seconds
+            setTimeout(function() {
+                hiddenImage.classList.remove('show-hidden-image');
+            }, 1000);
+        }
+
+        // Scale animation
+        profilePicture.style.transform = 'scale(1.1)';
+        setTimeout(function() {
+            profilePicture.style.transform = 'scale(1)';
+        }, 100);
+    });
+
+    // Show loading screen initially
+    var loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.classList.add('active');
+
+    // Hide loading screen when content is fully loaded
+    window.addEventListener('load', function() {
+        loadingScreen.classList.remove('active');
+    });
+    
 });

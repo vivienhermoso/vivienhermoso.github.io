@@ -23,7 +23,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
@@ -65,6 +65,38 @@ body {
     transform: scale(1.1); /* Increase size by 10% on hover */
 }
 
+.hero-buttons .btn-primary {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: #ffffff; /* Neon green text */
+    border: 1px solid #ffffff; /* Neon green border */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace; /* Code-like font */
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 10px; /* Adjust spacing between buttons */
+    font-weight: bold;
+}
+
+.hero-buttons .btn-primary:hover {
+    background-color: #ffffff; /* Neon green on hover */
+    color: #000; /* Black text on hover */
+}
+
+.hero-iama {
+    font-size: 25px; 
+    color: #ffffff; 
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: bold; 
+}
+
+.hero-name{
+    font-size: 3rem; 
+    font-weight: bold; 
+    color: #ffffff;
+}
+
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -72,8 +104,20 @@ body {
     margin-bottom: 30px;
 }
 
+#portfolio-title-section {
+    text-align: center;
+    padding: 10px 0; /* Adjust padding as needed */
+    scroll-margin-top: 100px;
+}
+
 .portfolio-item {
     margin-bottom: 30px;
+}
+
+.portfolio-title {
+    font-size: 3rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #333;
 }
 
 .card {
@@ -81,11 +125,11 @@ body {
     border-radius: 8px;
     /* transition: transform 0.3s; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust values for shadow color, size, and opacity */
-    transition: box-shadow 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
 }
 
 .card-title {
@@ -257,8 +301,89 @@ footer ul li a:hover {
     transition: transform 0.3s ease; /* Add smooth transition */
 }
 
-/* Hover effect for Profile Picture */
-.profile-picture:hover {
-    transform: scale(1.1); /* Scale up by 10% on hover */
+.click-text {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    display: none;
+    opacity: 0;
+    animation: popUp 1s forwards
 }
 
+@keyframes popUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes fire {
+    0% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
+    50% { box-shadow: 0 0 30px rgba(255, 69, 0, 0.8); }
+    100% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
+}
+
+.fire-effect {
+    animation: fire 1s infinite;
+}
+
+.hidden-image {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s, transform 0.5s;
+    width: 100px;
+    height: 150px;
+}
+
+.show-hidden-image {
+    opacity: 1;
+    transform: translate(-50%, -25px);
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    display: none; /* Initially hidden */
+}
+
+#loading-screen.active {
+    display: block; /* Show loading screen when active */
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #00ff00;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

@@ -9,8 +9,27 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/profilepicround.png" type="image/x-icon"> 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Vivien Ericca Hermoso's Portfolio">
+    <meta property="og:description" content="Welcome to Vivien Ericca Hermoso's professional portfolio.">
+    <meta property="og:image" content="img/heross.png">
+    <meta property="og:url" content="https://vivienhermoso.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vivien Ericca Hermoso's Portfolio">
+    <meta name="twitter:description" content="Welcome to Vivien Ericca Hermoso's portfolio.">
+    <meta name="twitter:image" content="img/heross.png">
 </head>
 <body>
+    <div id="loading-screen">
+        <div class="overlay"></div>
+        <div class="loader"></div>
+    </div>
+
+    <div id="wrapper">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -39,11 +58,11 @@
     <div class="hero" id="hero">
         <div class="hero-content">
             <img src="img/profilepic.png" class="hero-profile-pic" alt="Profile Picture">
-            <h1 style="font-size: 3rem; font-weight: bold; color: #ffffff;">I am Vivien Ericca Hermoso</h1>
-            <p style="font-size: 25px; color: #ffffff;">I'm a <span id="typed-text"></span></p>
+            <h1 class="hero-name">I am Vivien Ericca Hermoso</h1>
+            <p class="hero-iama">I'm a <span id="typed-text"></span></p>
             <div class="hero-buttons">
                 <a href="#about" class="btn btn-primary mr-2">About</a>
-                <a href="#portfolio" class="btn btn-primary mr-2">Portfolio</a>
+                <a href="#portfolio-title-section" class="btn btn-primary mr-2">Portfolio</a>
                 <a href="#contact" class="btn btn-primary">Contact</a>
             </div>
         </div>
@@ -66,16 +85,23 @@
             <div class="col-lg-6">
                 <div class="about-image text-center">
                     <img src="img/profilepic2.png" class="img-fluid rounded-circle profile-picture" alt="Profile Picture">
+                    <div id="click-text" class="click-text position-absolute w-100 text-center"></div>
                 </div>
+                <img src="img/meown.png" class="hidden-image" alt="Hidden Image">
             </div>
         </div>
         <!-- Divider -->
     <hr class="section-divider">
     </section>
 
+    <!-- Portfolio Title -->
+    <section id="portfolio-title-section" class="container text-center py-1">
+        <h3 class="portfolio-title">Portfolio</h2>
+    </section>
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="container py-5">
-        <h2 class="section-title">Notable Projects</h2>
+        <h3 class="section-title">Notable Projects</h3>
         <div class="row">
             <div class="col-md-4 portfolio-item">
                 <div class="card">
@@ -135,14 +161,14 @@
             </div>
         </div>
         <!-- Divider -->
-    <hr class="section-divider">
+        <hr class="section-divider">
     </section>
 
     <!-- Practicum Section -->
     <section id="practicum" class="container py-5">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="section-title mb-4">Practicum Experience</h2>
+                <h3 class="section-title mb-4">Practicum Experience</h3>
                 <div class="practicum-image text-center">
                     <img src="img/cloudlex.png" class="img-fluid rounded" alt="Practicum Image">
                 </div>
@@ -166,44 +192,55 @@
             </div>
         </div>
         <!-- Divider -->
-    <hr class="section-divider">
+        <hr class="section-divider">
     </section>
+
     
     <!-- Contact Section -->
     <section id="contact" class="container py-5">
-        <h2 class="section-title">Contact Me</h2>
-        <form action="https://formspree.io/f/xdknoyvj" method="POST" id="contact-form">
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="name">Name <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        <div class="text-center mb-4">
+            <h2 class="section-title">Contact Me</h2>
+            <p class="lead">Have questions or want to work together? Fill out the form below to get in touch!</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="contact-form bg-light p-4 rounded">
+                    <form action="https://formspree.io/f/xdknoyvj" method="POST" id="contact-form">
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="name"><i class="fas fa-user"></i> Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Email address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="_replyto" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Subject <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment"></i> Message <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submit-btn" disabled>Submit</button>
+                    </form>
+                    <div id="form-success" style="display:none;" class="mt-4 text-center">
+                        <h4>Thank you! Your message has been sent.</h4>
+                        <button id="send-another" class="btn btn-secondary">Send Another Message</button>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="email">Email address <span class="text-danger">*</span></label>
-                        <input type="email" class="form-control" id="email" name="_replyto" placeholder="Enter your email" required>
-                    </div>
-                </div>
             </div>
-            <div class="form-group">
-                <label for="subject">Subject <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message <span class="text-danger">*</span></label>
-                <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter your message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" id="submit-btn" disabled>Submit</button>
-        </form>
-        <div id="form-success" style="display:none;">
-            <h4>Thank you! Your message has been sent.</h4>
-            <button id="send-another" class="btn btn-secondary">Send Another Message</button>
         </div>
         <!-- Divider -->
-    <hr class="section-divider">
+        <hr class="section-divider mt-5">
     </section>
+
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -232,6 +269,8 @@
             </div>
         </div>
     </footer>
+
+    </div>
 
 </body>
 </html>
