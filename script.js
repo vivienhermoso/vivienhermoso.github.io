@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clickCount++;
 
         // Check if click count is a multiple of 10
-        if (clickCount % 5 === 0 && clickCount % 10 !== 0) {
+        if (clickCount % 10 === 0) {
             var randomIndex = Math.floor(Math.random() * texts.length);
             var randomText = texts[randomIndex];
 
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Check if click count is a multiple of 100
-        if (clickCount % 10 === 0) {
+        if (clickCount % 5 === 0 && clickCount % 10 !== 0) {
             hiddenImage.classList.add('show-hidden-image');
 
             // Hide the hidden image after 3 seconds
