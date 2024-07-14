@@ -175,6 +175,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    document.querySelectorAll('.organization-item .card').forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('expanded');
+        });
+    });
+
     // image click
     var profilePicture = document.querySelector('.profile-picture');
     var hiddenImage = document.querySelector('.hidden-image');
@@ -227,6 +233,61 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hide loading screen when content is fully loaded
     window.addEventListener('load', function() {
         loadingScreen.classList.remove('active');
+    });
+
+    //fade in scroll
+    const fadeInElements = document.querySelectorAll('.fade-in-element');
+
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        return (
+            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('visible');
+    };
+
+    const handleScrollAnimation = () => {
+        fadeInElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            }
+        })
+    }
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    // Initial check to see if any elements are already in view
+    handleScrollAnimation();
+
+    //certificate
+    const certificationItems = document.querySelectorAll('.certification-item');
+    certificationItems.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+    const viewMoreButton = document.getElementById('view-more-certifications');
+
+    viewMoreButton.addEventListener('click', function () {
+        // Toggle visibility of each certification item after the second one
+        certificationItems.forEach((item, index) => {
+            if (index >= 2) { // Adjust the index as needed
+                item.classList.toggle('hidden');
+            }
+        });
+
+        // Toggle text on the button
+        if (viewMoreButton.textContent === 'View More') {
+            viewMoreButton.textContent = 'View Less';
+        } else {
+            viewMoreButton.textContent = 'View More';
+        }
     });
     
 });

@@ -35,17 +35,23 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#hero">
             <img src="img/profilepic2.png" class="navbar-profile-pic" alt="Profile Picture">
-            Vivien Ericca Hermoso
+            <span class="d-none d-lg-inline">Vivien Ericca Hermoso</span>
         </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#aboutme">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#portfolio-title-section" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Portfolio
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu dropdown-menu-right dropdown-dark bg-dark" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#portfolio">Notable Projects</a>
+                        <a class="dropdown-item" href="#student-organizations">Student Organizations</a>
                         <a class="dropdown-item" href="#practicum">Practicum</a>
                     </div>
                 </li>
@@ -61,7 +67,7 @@
             <h1 class="hero-name">I am Vivien Ericca Hermoso</h1>
             <p class="hero-iama">I'm a <span id="typed-text"></span></p>
             <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary mr-2">About</a>
+                <a href="#aboutme" class="btn btn-primary mr-2">About</a>
                 <a href="#portfolio-title-section" class="btn btn-primary mr-2">Portfolio</a>
                 <a href="#contact" class="btn btn-primary">Contact</a>
             </div>
@@ -75,11 +81,11 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="container py-5">
+    <section id="about" class="container pt-xl-5 fade-in-element">
         <div class="row">
             <div class="col-lg-6">
-                <div class="about-content">
-                    <h2 class="section-title mb-4">About Me</h2>
+                <div class="about-content pt-xl-5" id="aboutme">
+                    <h2 class="section-title mb-4 pt-xl-5" >About Me</h2>
                     <p>Vivien Ericca I. Hermoso is a fourth-year Computer Science student at Mapúa Malayan Colleges Laguna. She has focused on front-end and mobile development, with a keen interest in software Quality Assurance (QA).</p>
                     <p>Vivien gained significant experience in mobile development through her work on key projects, including iOS development for Mapúa MCL's digital passport scanner for iPad and Android development for e-ganapp.</p>
                     <p>She has consistently demonstrated academic excellence as a Dean's Lister. Vivien currently serves as Publication Committee Chair of Mapúa MCL-ACM, 4th Year Representative of JPCS Mapúa MCL, and Internal Relations Associate of Mapúa MCL-SSC. Previously, she was Vice President for Audit of Mapúa MCL-SSC and SSC Representative of Mapúa MCL-CCIS SC.</p>
@@ -100,13 +106,243 @@
     <hr class="section-divider">
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="container py-5 fade-in-element">
+        <h2 class="section-title mb-4">Education</h2>
+        <div class="row">
+            <div class="education-item mb-4">
+                <img src="img/mmcl01.png" alt="Mapúa Malayan Colleges Laguna Logo" class="school-logo align-self-start mr-3">
+                <div class="education-details">
+                    <h3>Mapúa Malayan Colleges Laguna</h3>
+                    <p>Bachelor of Science - BS, Computer Science</p>
+                    <span>2020 - 2024</span>
+                </div>
+            </div>
+            <div class="education-item ">
+                <img src="img/mmcl01.png" alt="Mapúa Malayan Colleges Laguna Logo" class="school-logo align-self-start mr-3">
+                <div class="education-details">
+                    <h3>Mapúa Malayan Colleges Laguna</h3>
+                    <p>Information and Communications Technology</p>
+                    <span>2018 - 2020</span>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <hr class="section-divider">
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="container py-5 px fade-in-element">
+        <h3 class="section-title">Certifications</h3>
+        <div class="row">
+            <!-- cert 1 -->
+            <div class="col-md-6 certification-item py-2">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/google.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Foundations of User Experience (UX) Design</h5>
+                        <p class="cert-company">Google</p>
+                        <p class="cert-date">Issued May 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>XPTER2VM28RE</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/XPTER2VM28RE" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>User Experience (UX), Prototype, Wireframe</p>
+                </div>
+            </div>
+            <!-- cert 2 -->
+            <div class="col-md-6 certification-item py-2">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/google.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Foundations of Project Management</h5>
+                        <p class="cert-company">Google</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>WNL88ESFF3WB</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/WNL88ESFF3WB" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Project Management</p>
+                </div>
+            </div>
+            <!-- cert 3 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/meta.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Introduction to Front-End Development</h5>
+                        <p class="cert-company">Meta</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>VYQ6S6QG55UM</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/VYQ6S6QG55UM" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Front-End Development, Bootstrap</p>
+                </div>
+            </div>
+            <!-- cert 4 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/meta.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Version Control</h5>
+                        <p class="cert-company">Meta</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>SY6AK2YNNAHV</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/SY6AK2YNNAHV" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>GitHub</p>
+                </div>
+            </div>
+            <!-- cert 5 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/googlecloud.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Getting started with Flutter Development</h5>
+                        <p class="cert-company">Google Cloud</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>ZDQERK5DKCXP</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/ZDQERK5DKCXP" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Flutter</p>
+                </div>
+            </div>
+            <!-- cert 6 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/googlecloud.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Working with Onscreen Data in a Flutter Application</h5>
+                        <p class="cert-company">Google Cloud</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>N6EVH6N7LRAK</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/N6EVH6N7LRAK" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Flutter</p>
+                </div>
+            </div>
+            <!-- cert 7 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/googlecloud.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Material Components for Flutter Basics</h5>
+                        <p class="cert-company">Google Cloud</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>QG7C628JTWTQ</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/QG7C628JTWTQ" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Flutter</p>
+                </div>
+            </div>
+            <!-- cert 8 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/googlecloud.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Implementing Page Navigation in a Flutter Application</h5>
+                        <p class="cert-company">Google Cloud</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>392ZSAG7R95P</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/392ZSAG7R95P" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Flutter</p>
+                </div>
+            </div>
+            <!-- cert 9 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/googlecloud.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Flutter Startup Namer</h5>
+                        <p class="cert-company">Google Cloud</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>5BDMZVQJPEHY</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/5BDMZVQJPEHY" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Flutter</p>
+                </div>
+            </div>
+            <!-- cert 10 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/googlecloud.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Flutter Qwik Start</h5>
+                        <p class="cert-company">Google Cloud</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>CMHPZ6FVTLH2</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/CMHPZ6FVTLH2" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Flutter</p>
+                </div>
+            </div>
+            <!-- cert 11 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/googlecloud.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Build a Two Screen Flutter Application</h5>
+                        <p class="cert-company">Google Cloud</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>27TN5WW76GVR</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/27TN5WW76GVR" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Flutter</p>
+                </div>
+            </div>
+            <!-- cert 12 -->
+            <div class="col-md-6 certification-item py-2 hidden">
+                <div class="certification-summary d-flex align-items-center">
+                    <img src="img/coursera_logo.png" alt="Certificate Logo" class="cert-logo align-self-start">
+                    <div class="cert-details ml-3">
+                        <h5 class="cert-title">Get Started with Figma</h5>
+                        <p class="cert-company">Coursera</p>
+                        <p class="cert-date">Issued Jun 2023</p>
+                    </div>
+                </div>
+                <div class="cert-expanded mt-3">
+                    <p><strong>Credential ID: </strong>WJHKTSJ4TF7R</p>
+                    <a href="https://www.coursera.org/account/accomplishments/certificate/WJHKTSJ4TF7R" class="credential-link" target="_blank">Show Credential <i class="fas fa-external-link-alt"></i></a>
+                    <p><strong>Skills: </strong>Figma (Software)</p>
+                </div>
+            </div>
+            <!-- View More Button -->
+            <div class="col-12 text-center">
+                <button id="view-more-certifications" class="btn btn-primary mt-3">View More</button>
+            </div>
+        </div>
+        <!-- Divider -->
+        <hr class="section-divider">
+    </section>
+
     <!-- Portfolio Title -->
-    <section id="portfolio-title-section" class="container text-center py-1">
+    <section id="portfolio-title-section" class="container text-center py-1 fade-in-element">
         <h3 class="portfolio-title">Portfolio</h2>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="container py-5">
+    <section id="portfolio" class="container py-5 fade-in-element">
         <h3 class="section-title">Notable Projects</h3>
         <div class="row">
             <div class="col-md-4 portfolio-item">
@@ -124,7 +360,7 @@
                                 <span class="badge badge-danger">cPanel</span>
                             </div>
                             <br/>
-                            <a href="https://play.google.com/store/apps/details?id=com.eganappattendees&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.eganappattendees&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +396,94 @@
                                 <span class="badge badge-success">Prototype</span>
                                 <span class="badge badge-danger">UI/UX Design</span>
                             </div>
-                            <a href="https://play.google.com/store/apps/details?id=com.mapuamclacmapp&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.mapuamclacmapp&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Divider -->
+        <hr class="section-divider">
+    </section>
+
+    <!-- Student Organizations Section -->
+    <section id="student-organizations" class="container py-5 fade-in-element">
+        <h3 class="section-title">Student Organizations</h3>
+        <div class="row">
+            <div class="col-md-4 organization-item">
+                <div class="card">
+                    <img src="img/mmclacmold.png" class="card-img-top border-bottom-img" alt="Organization 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Junior MCL-ACM</h5>
+                        <p class="card-text">Junior MCL - Association for Computing Machinery Student Chapter</p>
+                        <p class="card-year">2019 - 2020</p>
+                        <div class="card-details">
+                            <ul class="positions">
+                                <li>Research & Development member</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 organization-item">
+                <div class="card">
+                    <img src="img/06.png" class="card-img-top border-bottom-img" alt="Organization 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Mapúa MCL-ACM</h5>
+                        <p class="card-text">Mapúa MCL - Association for Computing Machinery Student Chapter</p>
+                        <p class="card-year">2020 - 2024</p>
+                        <div class="card-details">
+                            <ul class="positions">
+                                <li>Publication Committee Chair (2020-2022, 2023-2024)</li>
+                            </ul>
+                            <!-- <a href="https://acm.mcl-ccis.net" class="badge badge-white mt-2" target="_blank">View Website <i class="fas fa-external-link-alt"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 organization-item">
+                <div class="card">
+                    <img src="img/jpcs.png" class="card-img-top border-bottom-img" alt="Organization 2">
+                    <div class="card-body">
+                        <h5 class="card-title">JPCS Mapúa MCL</h5>
+                        <p class="card-text">Junior Philippine Computer Society - Mapúa MCL Chapter</p>
+                        <br/>
+                        <p class="card-year">2023-2024</p>
+                        <div class="card-details">
+                            <ul class="positions">
+                                <li>4th Year Representative (2023-2024)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 organization-item">
+                <div class="card">
+                    <img src="img/ccis.png" class="card-img-top border-bottom-img" alt="Organization 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Mapúa MCL-CCIS SC</h5>
+                        <p class="card-text">Mapúa MCL Supreme Student Council</p>
+                        <p class="card-year">2022-2023</p>
+                        <div class="card-details">
+                            <ul class="positions">
+                                <li>Supreme Student Council Representative (2022-2023)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 organization-item">
+                <div class="card">
+                    <img src="img/ssc.png" class="card-img-top border-bottom-img" alt="Organization 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Mapúa MCL-SSC</h5>
+                        <p class="card-text">Mapúa MCL Supreme Student Council</p>
+                        <p class="card-year">2022-2024</p>
+                        <div class="card-details">
+                            <ul class="positions">
+                                <li>Internal Relations Associate (2023-2024)</li>
+                                <li>Vice President for Audit (2022-2023)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -171,7 +494,7 @@
     </section>
 
     <!-- Practicum Section -->
-    <section id="practicum" class="container py-5">
+    <section id="practicum" class="container py-5 fade-in-element">
         <div class="row">
             <div class="col-lg-6">
                 <h3 class="section-title mb-4">Practicum Experience</h3>
@@ -203,7 +526,7 @@
 
     
     <!-- Contact Section -->
-    <section id="contact" class="container py-5">
+    <section id="contact" class="container py-5 fade-in-element">
         <div class="text-center mb-4">
             <h2 class="section-title">Contact Me</h2>
             <p class="lead">Have questions or want to work together? Fill out the form below to get in touch!</p>

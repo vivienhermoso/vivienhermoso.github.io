@@ -1,6 +1,6 @@
 /* Custom styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -154,9 +154,14 @@ body {
     font-weight: bold;
 }
 
-.card-text {
+.card-text, .card-year {
     font-size: 1em;
     color: #666;
+}
+
+.card-img-top {
+    border-bottom: 1px solid #ccc;
+    border-radius: 8px 8px 0 0;
 }
 
 .contact-form {
@@ -196,6 +201,29 @@ body {
     z-index: 1000; /* Ensure it's above other content */
 }
 
+.navbar .dropdown-menu {
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 100%;
+    margin-top: 0.125rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+@media (max-width: 991.98px) {
+    .navbar .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin: 0;
+    }
+}
+
+.dropdown-item {
+    color: rgba(255, 255, 255, 0.9); /* Match the navbar link color */
+}
+
 .navbar.fixed-top {
     top: 0;
 }
@@ -232,7 +260,7 @@ body {
 }
 
 .about-content {
-    padding-right: 30px; /* Add space on the right for better readability */
+    padding-right: 20px; /* Add space on the right for better readability */
 }
 
 .about-image {
@@ -281,12 +309,27 @@ footer ul li a:hover {
     color: #17a2b8; /* Hover color for links (adjust as needed) */
 }
 
-#about {
+#aboutme {
+    padding-top: 50px; /* Adjust as needed */
+    scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
+}
+
+#education {
+    padding-top: 25px; /* Adjust as needed */
+    scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
+}
+
+#certifications {
     padding-top: 25px; /* Adjust as needed */
     scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
 }
 
 #portfolio {
+    padding-top: 25px; /* Adjust as needed */
+    scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
+}
+
+#student-organizations {
     padding-top: 25px; /* Adjust as needed */
     scroll-margin-top: 25px; /* Optional: For smooth scroll alignment */
 }
@@ -369,7 +412,7 @@ footer ul li a:hover {
 
 .show-hidden-image {
     opacity: 1;
-    transform: translate(-50%, -75px);
+    transform: translate(-50%, -25px);
 }
 
 #loading-screen {
@@ -403,4 +446,176 @@ footer ul li a:hover {
 @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Education Section Styles */
+.education-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    max-width: 50%; /* Adjust based on your design preferences */
+}
+
+.school-logo {
+    width: auto;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.education-details {
+    text-align: left;
+    flex: 1;
+}
+
+.education-details h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.education-details p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.education-details span {
+    font-size: 1em;
+    color: #777;
+}
+
+.education-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        display: flex;
+    }
+    .school-logo {
+        margin-bottom: 10px; /* Adjust spacing between logo and details */
+    }
+}
+
+/* Certifications Section Styles */
+
+.certification-item {
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.certification-item:hover {
+    background-color: #f0f0f0;
+}
+
+.certification-summary {
+    display: flex;
+    align-items: flex-start; /* Adjust alignment as needed */
+    width: 100%;
+}
+
+.cert-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.cert-details {
+    text-align: left;
+    flex: 1;
+}
+
+.cert-title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.cert-company {
+    font-size: 1em;
+    margin: 2px 0;
+}
+
+.cert-date {
+    font-size: 1em;
+    margin: 2px 0;
+    color: #777;
+}
+
+.cert-expanded {
+    display: none;
+    text-align: left;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.cert-expanded p {
+    margin: 5px 0;
+}
+
+.certification-item.active .cert-expanded {
+    display: block;
+}
+
+.credential-link a {
+    text-decoration: none;
+    color: #007bff; /* Adjust color as needed */
+}
+
+.credential-link a:hover {
+    text-decoration: underline;
+}
+
+.credential-link a i {
+    margin-left: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+#student-organizations {
+    padding: 10px 0;
+}
+
+.organization-item {
+    margin-bottom: 30px;
+}
+
+.positions {
+    list-style-type: none;
+    padding: 0;
+}
+
+.positions li {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 10px;
 }
