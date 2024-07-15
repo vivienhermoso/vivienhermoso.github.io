@@ -131,6 +131,18 @@ body {
     margin-bottom: 30px;
 }
 
+.toggle-icon {
+    cursor: pointer;
+}
+
+.toggle-icon i {
+    transition: transform 0.3s;
+}
+
+.toggle-icon i.up {
+    transform: rotate(180deg);
+}
+
 .portfolio-title {
     font-size: 3rem; /* Adjust font size as needed */
     font-weight: bold;
@@ -156,6 +168,11 @@ body {
 
 .card-text, .card-year {
     font-size: 1em;
+    color: #666;
+}
+
+.card-text-viewdetails {
+    font-size: 15px;
     color: #666;
 }
 
@@ -597,6 +614,18 @@ footer ul li a:hover {
 
 .hidden {
     display: none;
+}
+
+.toggle-icon {
+    cursor: pointer;
+}
+
+.toggle-icon i {
+    transition: transform 0.3s;
+}
+
+.toggle-icon i.up {
+    transform: rotate(180deg);
 }
 
 #student-organizations {

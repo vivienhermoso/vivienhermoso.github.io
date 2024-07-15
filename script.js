@@ -168,9 +168,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-
-    document.querySelectorAll('.portfolio-item .card').forEach(card => {
+    const portfolioItems = document.querySelectorAll('.portfolio-item .card');
+    portfolioItems.forEach(card => {
         card.addEventListener('click', function() {
+            const detailsSection = this.querySelector('.card-details');
+            const icon = this.querySelector('.toggle-icon i');
+    
+            detailsSection.classList.toggle('show');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+    
             this.classList.toggle('expanded');
         });
     });
@@ -269,9 +276,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const certificationItems = document.querySelectorAll('.certification-item');
     certificationItems.forEach(item => {
         item.addEventListener('click', () => {
+            const expandedSection = item.querySelector('.cert-expanded');
+            const icon = item.querySelector('.toggle-icon i');
+
+            expandedSection.classList.toggle('show');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+
             item.classList.toggle('active');
         });
     });
+
     const viewMoreButton = document.getElementById('view-more-certifications');
 
     viewMoreButton.addEventListener('click', function () {
