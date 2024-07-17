@@ -168,22 +168,45 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    //notable projects view more
     const portfolioItems = document.querySelectorAll('.portfolio-item .card');
     portfolioItems.forEach(card => {
         card.addEventListener('click', function() {
             const detailsSection = this.querySelector('.card-details');
             const icon = this.querySelector('.toggle-icon i');
+            const viewDetailsText = this.querySelector('.card-text-viewdetails');
     
             detailsSection.classList.toggle('show');
             icon.classList.toggle('fa-chevron-down');
             icon.classList.toggle('fa-chevron-up');
+
+            if (detailsSection.classList.contains('show')) {
+                viewDetailsText.innerHTML = 'Hide Details <i class="fas fa-chevron-up"></i>';
+            } else {
+                viewDetailsText.innerHTML = 'View Details <i class="fas fa-chevron-down"></i>';
+            }
     
             this.classList.toggle('expanded');
         });
     });
-
-    document.querySelectorAll('.organization-item .card').forEach(card => {
+    //student organizations view more
+    const orgItems = document.querySelectorAll('.organization-item .card');
+    orgItems.forEach(card => {
         card.addEventListener('click', function() {
+            const detailsSection = this.querySelector('.card-details');
+            const icon = this.querySelector('.toggle-icon i');
+            const viewDetailsText = this.querySelector('.card-text-viewdetails');
+
+            detailsSection.classList.toggle('show');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+            
+            if (detailsSection.classList.contains('show')) {
+                viewDetailsText.innerHTML = 'Hide Details <i class="fas fa-chevron-up"></i>';
+            } else {
+                viewDetailsText.innerHTML = 'View Details <i class="fas fa-chevron-down"></i>';
+            }
+
             this.classList.toggle('expanded');
         });
     });

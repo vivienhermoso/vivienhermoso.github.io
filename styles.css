@@ -133,6 +133,8 @@ body {
 
 .toggle-icon {
     cursor: pointer;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .toggle-icon i {
@@ -154,11 +156,11 @@ body {
     border-radius: 8px;
     /* transition: transform 0.3s; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust values for shadow color, size, and opacity */
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
 }
 
 .card-title {
@@ -181,19 +183,36 @@ body {
     border-radius: 8px 8px 0 0;
 }
 
+.organization-item {
+    margin-bottom: 30px;
+}
+
+.positions {
+    list-style-type: none;
+    padding: 0;
+}
+
+.positions li {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding: 5px 10px;
+}
+
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
 }
 
 .btn-primary {
-    background-color: #ff6f61;
-    border-color: #ff6f61;
+    background-color: #33a850;
+    border-color: #33a850;
 }
 
 .btn-primary:hover {
-    background-color: #ff5733;
-    border-color: #ff5733;
+    background-color: #33a850;
+    border-color: #33a850;
 }
 /* Custom CSS for form layout */
 .form-row {
@@ -256,6 +275,10 @@ body {
 .card-details {
     display: none;
     margin-top: 10px;
+}
+
+.card-details.show {
+    display: block;
 }
 
 .card.expanded .card-details {
@@ -630,21 +653,4 @@ footer ul li a:hover {
 
 #student-organizations {
     padding: 10px 0;
-}
-
-.organization-item {
-    margin-bottom: 30px;
-}
-
-.positions {
-    list-style-type: none;
-    padding: 0;
-}
-
-.positions li {
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 5px 0;
-    padding: 5px 10px;
 }
