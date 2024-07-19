@@ -6,6 +6,7 @@
     <title>Vivien Ericca Hermoso</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/profilepicround.png" type="image/x-icon"> 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -43,6 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#aboutme">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                 <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
                 <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                 <li class="nav-item dropdown">
@@ -50,7 +52,7 @@
                         Portfolio
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-dark bg-dark" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#portfolio">Notable Projects</a>
+                        <a class="dropdown-item" href="#portfolio">Projects</a>
                         <a class="dropdown-item" href="#student-organizations">Student Organizations</a>
                         <a class="dropdown-item" href="#practicum">Practicum</a>
                     </div>
@@ -68,6 +70,7 @@
             <p class="hero-iama">I'm a <span id="typed-text"></span></p>
             <div class="hero-buttons">
                 <a href="#aboutme" class="btn btn-primary mr-2">About</a>
+                <a href="#skills" class="btn btn-primary mr-2">Skills</a>
                 <a href="#portfolio-title-section" class="btn btn-primary mr-2">Portfolio</a>
                 <a href="#contact" class="btn btn-primary">Contact</a>
             </div>
@@ -104,6 +107,75 @@
         </div>
         <!-- Divider -->
     <hr class="section-divider">
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container py-5 fade-in-element">
+        <br/>
+        <br/>
+        <h2 class="section-title mb-4">Skills</h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <h5 class="skill-category"><i class="fas fa-code"></i> Programming Languages</h5>
+                <ul class="list-unstyled">
+                    <!-- <li><i class="fas fa-code"></i> Java</li> -->
+                    <li><i class="fas fa-code"></i> Python</li>
+                    <li><i class="fas fa-code"></i> C#</li>
+                    <li><i class="fas fa-code"></i> PHP</li>
+                    <li><i class="fas fa-code"></i> HTML</li>
+                    <li><i class="fas fa-code"></i> CSS</li>
+                    <li><i class="fas fa-code"></i> JavaScript</li>
+                    <li><i class="fas fa-code"></i> Swift
+                        <ul class="list-unstyled ml-4">
+                            <li><i class="fas fa-code"></i> SwiftUI</li>
+                            <li><i class="fas fa-code"></i> Core Data</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h5 class="skill-category"><i class="fas fa-toolbox"></i> Frameworks & Libraries</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-toolbox"></i> Bootstrap</li>
+                    <li><i class="fas fa-toolbox"></i> Flutter</li>
+                    <li><i class="fas fa-toolbox"></i> React Native</li>
+                    <li><i class="fas fa-toolbox"></i> MERN Stack
+                        <ul class="list-unstyled ml-4">
+                            <li><i class="fas fa-toolbox"></i> MongoDB</li>
+                            <li><i class="fas fa-toolbox"></i> Express.js</li>
+                            <li><i class="fas fa-toolbox"></i> React.js</li>
+                            <li><i class="fas fa-toolbox"></i> Node.js</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <h5 class="skill-category"><i class="fas fa-tools"></i> Tools & Technologies</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-tools"></i> Adobe Photoshop</li>
+                    <li><i class="fas fa-tools"></i> Canva</li>
+                    <li><i class="fas fa-tools"></i> Figma</li>
+                    <li><i class="fas fa-tools"></i> Google Apps Script</li>
+                    <li><i class="fas fa-tools"></i> MySQL</li>
+                    <li><i class="fas fa-tools"></i> API</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <h5 class="skill-category"><i class="fas fa-laptop-code"></i> Development Areas</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-laptop-code"></i> Web Development</li>
+                    <li><i class="fas fa-laptop-code"></i> Front-end Development</li>
+                    <li><i class="fas fa-laptop-code"></i> Mobile Application Development</li>
+                    <li><i class="fas fa-laptop-code"></i> Android Development</li>
+                    <li><i class="fas fa-laptop-code"></i> iOS Development</li>
+                    <li><i class="fas fa-laptop-code"></i> OOP (Object-Oriented Programming)</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Divider -->
+        <hr class="section-divider">
     </section>
 
     <!-- Education Section -->
@@ -367,7 +439,7 @@
             </div>
             <!-- View More Button -->
             <div class="col-12 text-center">
-                <button id="view-more-certifications" class="btn btn-primary mt-3">View More</button>
+                <button id="view-more-certifications" class="btn btn-success mt-3">View More</button>
             </div>
         </div>
         <!-- Divider -->
@@ -382,7 +454,7 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="container py-5 fade-in-element">
         <br/>
-        <h3 class="section-title">Notable Projects</h3>
+        <h3 class="section-title">Projects</h3>
         <div class="row">
             <div class="col-md-4 portfolio-item">
                 <div class="card">
@@ -391,6 +463,7 @@
                         <h5 class="card-title">e-ganapp</h5>
                         <p class="card-text">A Seamless Event Management System for Mapúa MCL.</p>
                         <div class="d-flex justify-content-between align-items-center">
+                            <p class="card-year">2024</p>
                             <div class="toggle-icon">
                                 <p class="card-text-viewdetails" id="view-details">View Details <i class="fas fa-chevron-down"></i></p>
                             </div>
@@ -410,11 +483,37 @@
             </div>
             <div class="col-md-4 portfolio-item">
                 <div class="card">
+                    <img src="img/06.png" class="card-img-top border-bottom-img" alt="Project 3">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Mapúa MCL-ACM</h5>
+                        <p class="card-text">A mobile application for Mapúa MCL-ACM members.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="card-year">2024</p>
+                            <div class="toggle-icon">
+                                <p class="card-text-viewdetails" id="view-details">View Details <i class="fas fa-chevron-down"></i></p>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <p class="second-description">Mapúa MCL-ACM Mobile Application, a specialized platform developed for members of Mapúa Malayan Colleges Laguna - Association for Computing Machinery (Mapúa MCL-ACM). The application facilitates attendance tracking, contribution management, and announcement dissemination within the organization. I contributed to the prototype and UI/UX design of the app.</p>
+                            <div class="skills">
+                                <span class="badge badge-primary">Figma</span>
+                                <span class="badge badge-secondary">Wireframe</span>
+                                <span class="badge badge-success">Prototype</span>
+                                <span class="badge badge-danger">UI/UX Design</span>
+                            </div>
+                            <a href="https://play.google.com/store/apps/details?id=com.mapuamclacmapp&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <div class="card">
                     <img src="img/05.png" class="card-img-top border-bottom-img" alt="Project 2">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Digital Passport Scanner</h5>
                         <p class="card-text">Digital Passport Scanner for iPads for Mapúa MCL FEST.</p>
                         <div class="d-flex justify-content-between align-items-center">
+                            <p class="card-year">2023</p>
                             <div class="toggle-icon">
                                 <p class="card-text-viewdetails" id="view-details">View Details <i class="fas fa-chevron-down"></i></p>
                             </div>
@@ -432,24 +531,49 @@
             </div>
             <div class="col-md-4 portfolio-item">
                 <div class="card">
-                    <img src="img/06.png" class="card-img-top border-bottom-img" alt="Project 3">
+                    <img src="img/07.png" class="card-img-top border-bottom-img" alt="Project 3">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Mapúa MCL-ACM</h5>
-                        <p class="card-text">A mobile application for Mapúa MCL-ACM members.</p>
+                        <h5 class="card-title">Jamieow Catch!</h5>
+                        <p class="card-text">A 2D catching game for Android devices.</p>
                         <div class="d-flex justify-content-between align-items-center">
+                            <p class="card-year">2021</p>
                             <div class="toggle-icon">
                                 <p class="card-text-viewdetails" id="view-details">View Details <i class="fas fa-chevron-down"></i></p>
                             </div>
                         </div>
                         <div class="card-details">
-                            <p class="second-description">Mapúa MCL-ACM Mobile Application, a specialized platform developed for members of Mapúa Malayan Colleges Laguna - Association for Computing Machinery (Mapúa MCL-ACM). The application facilitates attendance tracking, contribution management, and announcement dissemination within the organization. I contributed to the prototype and UI/UX design of the app.</p>
+                            <p class="second-description">Jamieow Catch! is a 2D catching game that can be played on Android devices, offering a fun and engaging experience similar to osu!catch. I provided the assets, including characters and designs, and developed the game using GDevelop.</p>
                             <div class="skills">
-                                <span class="badge badge-primary">Figma</span>
-                                <span class="badge badge-secondary">Wireframe</span>
-                                <span class="badge badge-success">Prototype</span>
-                                <span class="badge badge-danger">UI/UX Design</span>
+                                <span class="badge badge-primary">GDevelop</span>
+                                <span class="badge badge-secondary">Aseprite</span>
+                                <span class="badge badge-success">Game Development</span>
+                                <span class="badge badge-danger">Pixel Art</span>
                             </div>
-                            <a href="https://play.google.com/store/apps/details?id=com.mapuamclacmapp&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play <i class="fas fa-external-link-alt"></i></a>
+                            <!-- <a href="https://play.google.com/store/apps/details?id=com.mapuamclacmapp&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play <i class="fas fa-external-link-alt"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <div class="card">
+                    <img src="img/08.png" class="card-img-top border-bottom-img" alt="Project 3">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Know the Disease</h5>
+                        <p class="card-text">An information app about common diseases in the Philippines.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="card-year">2020</p>
+                            <div class="toggle-icon">
+                                <p class="card-text-viewdetails" id="view-details">View Details <i class="fas fa-chevron-down"></i></p>
+                            </div>
+                        </div>
+                        <div class="card-details">
+                            <p class="second-description">Know the Disease is a mobile application that provides information on common diseases in the Philippines, including symptoms, prevention methods, and causes. The app also features a true or false quiz to test users' understanding of the information presented. Developed during the start of the COVID-19 lockdown, this app aims to educate and inform users about important health topics.</p>
+                            <div class="skills">
+                                <span class="badge badge-primary">Android Studio</span>
+                                <span class="badge badge-secondary">Adobe Photoshop</span>
+                                <span class="badge badge-success">Android Development</span>
+                            </div>
+                            <!-- <a href="https://play.google.com/store/apps/details?id=com.mapuamclacmapp&pcampaignid=web_share" class="badge badge-white mt-2" target="_blank">View on Google Play <i class="fas fa-external-link-alt"></i></a> -->
                         </div>
                     </div>
                 </div>
