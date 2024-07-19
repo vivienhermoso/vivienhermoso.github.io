@@ -23,9 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
     var typed = new Typed('#typed-text', options);
 
     // Array of background images
-    var bgImages = ['img/01.jpg', 'img/02.jpg', 'img/03.jpg'];
+    var bgImages = ['img/01.png', 'img/02.png', 'img/03.png'];
     var currentIndex = 0;
     var hero = document.getElementById('hero');
+
+    // Preload images
+    function preloadImages(images) {
+        images.forEach(function(image) {
+            var img = new Image();
+            img.src = image;
+        });
+    }
+
+    preloadImages(bgImages);
 
     function changeBackground() {
         hero.style.backgroundImage = 'url("' + bgImages[currentIndex] + '")';
