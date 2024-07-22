@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vivien Ericca Hermoso</title>
+    <title>VEIH</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/profilepicround.png" type="image/x-icon"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Vivien Ericca Hermoso's Portfolio">
+    <meta property="og:title" content="VEIH">
     <meta property="og:description" content="Welcome to Vivien Ericca Hermoso's professional portfolio.">
     <meta property="og:image" content="img/heross.png">
     <meta property="og:url" content="https://vivienhermoso.github.io">
@@ -20,7 +23,7 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Vivien Ericca Hermoso's Portfolio">
+    <meta name="twitter:title" content="VEIH">
     <meta name="twitter:description" content="Welcome to Vivien Ericca Hermoso's portfolio.">
     <meta name="twitter:image" content="img/heross.png">
 </head>
@@ -36,7 +39,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#hero">
             <img src="img/profilepic2.png" class="navbar-profile-pic" alt="Profile Picture">
-            <span class="d-none d-lg-inline">Vivien Ericca Hermoso</span>
+            <span class="d-none d-lg-inline"><strong>VEIH</strong></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -65,7 +68,7 @@
     <div class="hero" id="hero">
         <div class="hero-content">
             <img src="img/profilepic.png" class="hero-profile-pic" alt="Profile Picture">
-            <h1 class="hero-name">I am Vivien Ericca Hermoso</h1>
+            <h1 class="hero-name">I am Vivien Ericca I. Hermoso</h1>
             <p class="hero-iama">I'm a <span id="typed-text"></span></p>
             <div class="hero-buttons">
                 <a href="#aboutme" class="btn btn-primary mr-2">About</a>
@@ -670,15 +673,15 @@
         <div class="row">
             <div class="col-lg-6">
                 <h3 class="section-title mb-4">Practicum Experience</h3>
-                <div class="practicum-image text-center">
+                <div class="practicum-image text-center blur-content">
                     <img src="img/cloudlex.png" class="img-fluid rounded" alt="Practicum Image">
                 </div>
-                <div class="practicum-image text-center">
+                <div class="practicum-image text-center blur-content">
                     <img src="img/cloudlex2.png" class="img-fluid rounded" alt="Practicum Image">
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="practicum-content">
+                <div class="practicum-content blur-content">
                     <br/>
                     <br/>
                     <br/>
@@ -688,15 +691,40 @@
                     <p>During the development phase, I primarily worked on the admin side of the application. In the last week, I shifted my focus to the customer side, where I worked on the profile view page and front-end enhancements.</p>
                     <p>I completed a total of 340 hours over 42.5 days at Cloudlex Software Solution.</p>
                     <!-- Button to Download CV -->
-                    <a href="pdf/Vivien Ericca Hermoso Practicum.pdf" target="_blank" class="btn btn-success mt-3">Practicum Final Report</a>
+                    <a href="pdf/Vivien Ericca Hermoso Practicum.pdf" target="_blank" class="btn btn-success mt-3 disabled" id="practicumReportBtn">Practicum Final Report</a>
+                </div>
+                <div class="overlay">
+                    <button class="btn btn-primary" id="viewContentBtn">View</button>
                 </div>
             </div>
         </div>
         <!-- Divider -->
         <hr class="section-divider">
     </section>
-
     
+    <!-- Password Modal -->
+    <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="passwordModalLabel">Enter Password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="passwordForm">
+                        <div class="form-group">
+                            <label for="passwordInput">Password</label>
+                            <input type="password" class="form-control" id="passwordInput" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+        
     <!-- Contact Section -->
     <section id="contact" class="container py-5 fade-in-element">
         <br/>

@@ -337,5 +337,24 @@ document.addEventListener('DOMContentLoaded', function() {
             viewMoreButton.textContent = 'View More';
         }
     });
+
+    document.getElementById('viewContentBtn').addEventListener('click', function () {
+        $('#passwordModal').modal('show');
+    });
     
+    document.getElementById('passwordForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var password = document.getElementById('passwordInput').value;
+        if (password === 'cloudlex') { 
+            document.querySelectorAll('.blur-content').forEach(function (element) {
+                element.classList.remove('blur-content');
+            });
+            document.querySelector('.overlay').style.display = 'none';
+            document.getElementById('practicumReportBtn').classList.remove('disabled');
+            document.getElementById('viewContentBtn').style.display = 'none';
+            $('#passwordModal').modal('hide');
+        } else {
+            alert('Incorrect password. Please try again.');
+        }
+    }); 
 });
