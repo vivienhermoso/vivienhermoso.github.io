@@ -260,10 +260,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Scale animation
-        profilePicture.style.transform = 'scale(1.1)';
-        setTimeout(function() {
-            profilePicture.style.transform = 'scale(1)';
-        }, 100);
+        // profilePicture.style.transform = 'scale(1.1)';
+        // setTimeout(function() {
+        //     profilePicture.style.transform = 'scale(1)';
+        // }, 100);
     });
 
     // Show loading screen initially
