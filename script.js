@@ -232,22 +232,22 @@ document.addEventListener('DOMContentLoaded', function() {
         clickCount++;
 
         // Check if click count is a multiple of 10
-        if (clickCount % 10 === 0) {
-            var randomIndex = Math.floor(Math.random() * texts.length);
-            var randomText = texts[randomIndex];
+        // if (clickCount % 10 === 0) {
+        //     var randomIndex = Math.floor(Math.random() * texts.length);
+        //     var randomText = texts[randomIndex];
 
-            // Display the text with animation
-            textElement.textContent = randomText;
-            textElement.style.display = 'block';
-            textElement.style.animation = 'none'; // Reset animation
-            textElement.offsetHeight; // Trigger reflow
-            textElement.style.animation = ''; // Re-apply animation
+        //     // Display the text with animation
+        //     textElement.textContent = randomText;
+        //     textElement.style.display = 'block';
+        //     textElement.style.animation = 'none'; // Reset animation
+        //     textElement.offsetHeight; // Trigger reflow
+        //     textElement.style.animation = ''; // Re-apply animation
 
-            // Remove text after animation ends (1 second)
-            setTimeout(function() {
-                textElement.style.display = 'none';
-            }, 1000);
-        }
+        //     // Remove text after animation ends (1 second)
+        //     setTimeout(function() {
+        //         textElement.style.display = 'none';
+        //     }, 1000);
+        // }
 
         // Check if click count is a multiple of 100
         if (clickCount % 5 === 0 && clickCount % 10 !== 0) {
