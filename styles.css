@@ -654,3 +654,21 @@ footer ul li a:hover {
 #student-organizations {
     padding: 10px 0;
 }
+
+.sparkle {
+position: fixed;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background: radial-gradient(circle, #00FF00 0%, transparent 50%);
+pointer-events: none;
+opacity: 1;
+animation: fade 0.75s forwards;
+}
+
+@keyframes fade {
+to {
+    transform: scale(2);
+    opacity: 0;
+}
+}

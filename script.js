@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Typing animation
     var options = {
-        strings: ['computer scientist.', 'software engineer.', 'digital solutions developer.'],
+        strings: ['computer scientist.', 'software engineer.'],
         typeSpeed: 25,
         backSpeed: 50,
         backDelay: 1500,
@@ -336,6 +336,15 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             viewMoreButton.textContent = 'View More';
         }
+    });
+
+    document.addEventListener('mousemove', e => {
+    const sparkle = document.createElement('div');
+    sparkle.classList.add('sparkle');
+    sparkle.style.left = e.clientX + 'px';
+    sparkle.style.top = e.clientY + 'px';
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 500);
     });
     
 });
