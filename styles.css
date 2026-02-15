@@ -663,12 +663,21 @@ border-radius: 50%;
 background: radial-gradient(circle, #00FF00 0%, transparent 50%);
 pointer-events: none;
 opacity: 1;
-animation: fade 0.75s forwards;
+animation: fade 0.50s forwards;
 }
 
 @keyframes fade {
 to {
-    transform: scale(2);
+    transform: scale(5);
     opacity: 0;
 }
+}
+
+.linkedin-mini {
+    max-width: 400px;
+    transition: background 0.3s ease;
+}
+
+.linkedin-mini:hover {
+    background-color: #f8f9fa;
 }
